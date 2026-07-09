@@ -38,6 +38,8 @@ class FireSimGemminiBuckyballConfig
 class FireSimBuckyballToyConfig
     extends Config(
       new WithBootROM ++
+        new chipyard.iobinders.WithUARTIOCells ++
+        new chipyard.iobinders.WithBlockDeviceIOPunchthrough ++
         new firechip.chip.WithDefaultFireSimBridges ++
         new firechip.chip.WithFireSimConfigTweaks ++
         new examples.toy.BuckyballToyConfig
